@@ -1,11 +1,16 @@
-<div style="margin-bottom: 16px;">
-    <h4 style="color: rgb(120, 120, 120); margin-bottom: 4px;">{{ job.title }}</h4>
-    <div>
-        <b>Location:</b> {{ job.location }}
+<div class="border-bottom row" style="margin-bottom: 16px; padding-bottom: 8px;">
+    <div class="col-9">
+        <h4 style="color: rgb(120, 120, 120); margin-bottom: 4px;">{{ job.title }}</h4>
+        <div>
+            <b>Location:</b> {{ job.location }}
+        </div>
+        {% if job.salary != null %}
+        <div>
+            <b>Salary:</b> {{ job.salary }}
+        </div>
+        {% endif %}
     </div>
-    {% if job.salary != null %}
-    <div>
-        <b>Salary:</b> {{ job.salary }}
+    <div class="col-3">
+        <button type="button" class="btn btn-outline-primary">Apply</button>
     </div>
-    {% endif %}
 </div>
