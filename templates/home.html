@@ -12,19 +12,30 @@
             width: 100%;
             height: 360px;
             object-fit: cover;
+            margin-bottom: 16px;
         }
     </style>
 </head>
 <body>
     {% include 'nav.html' %}
+    
+    <img class="img-fluid" id="banner" src="../static/banner.jpg" alt="">
 
     <div class="container">
         <h1 class="text-center mt-2 mb-4">{{ company_name }} Careers</h1>
-    
-        <img class="img-fluid" id="banner" src="../static/banner.jpg" alt="">
-    
-        <h2 class="text-center mt-2 mb-4">About {{ company_name }}</h2>
-        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates harum accusantium sapiente nostrum soluta totam itaque quaerat eligendi. Reiciendis doloremque nesciunt ad voluptate eos aliquam unde consectetur iste, fugiat et.</p>
+
+        <div class="row" style="margin-bottom: 16px;">
+            <div class="col-md-6">
+                <p class="lead">Interactively exploit an expanded array of web-readiness vis-a-vis go forward paradigms. Synergistically actualize seamless relationships without high-payoff benefits. Compellingly repurpose low-risk high-yield channels and alternative meta-services. Authoritatively incubate granular strategic theme areas whereas open-source results. Enthusiastically simplify state of the art models before seamless data.
+
+                    Dramatically reinvent viral metrics whereas covalent niche markets. Continually integrate cutting-edge portals after vertical portals.</p>
+            </div>
+
+            <div class="d-none d-md-block col-md-6">
+                <img src="/static/people.jpg" alt="" height="320px" style="border-radius: 4px;">
+            </div>
+        </div>
+        
     
         <h2 class="text-center mt-2 mb-4">Open Positions</h2>
         <div>
@@ -35,10 +46,10 @@
 
         <div class="text-center">
             <button class="btn btn-primary btn-lg">Contact Us</button>
-            <p class="lead mt-4">&copy;2023, Evans Kofi Agyei</p>
         </div>
 
     </div>
 
+    {% include 'footer.html' %}
 </body>
 </html>
