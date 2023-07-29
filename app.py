@@ -18,4 +18,8 @@ def list_jobs():
 @app.route("/jobs/<id>")
 def show_job(id):
     job = load_jobs_from_db(id)
-    return jsonify(job)
+    # if job is not found
+    if not job:
+        return "Not Found", 404
+    
+    return render_template('jobpage.html', job=job)
