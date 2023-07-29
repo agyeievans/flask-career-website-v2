@@ -1,5 +1,5 @@
 from flask import Flask, render_template, jsonify
-from database import load_jobs_from_db
+from database import load_jobs_from_db, load_jobs_from_db
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -14,3 +14,8 @@ def home():
 def list_jobs():
     jobs = load_jobs_from_db()
     return jsonify(jobs)
+
+@app.route("/jobs/<id>")
+def show_job(id):
+    job = load_jobs_from_db(id)
+    return jsonify(job)
