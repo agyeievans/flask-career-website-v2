@@ -1,5 +1,7 @@
 from flask import Flask, render_template, jsonify
 from database import load_jobs_from_db
+from dotenv import load_dotenv
+load_dotenv()
 
 app = Flask(__name__)
 
