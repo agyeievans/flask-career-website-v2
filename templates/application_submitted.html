@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Application Submitted</title>
+        {% include 'bootstrap.html' %}
+
+    </head>
+    <body>
+        {% include 'nav.html' %}
+
+        <style>
+            #banner{
+                width: 100%;
+                height: 360px;
+                object-fit: cover;
+                margin-bottom: 16px;
+            }
+        </style>
+
+        <img class="img-fluid" id="banner" src="/static/banner.jpg" alt>
+
+        <div class="container">
+            <h1 class="text-center mt-2 mb-4">Jovian Careers</h1>
+
+            <p>Your application for the role of <strong>{{ job.title }}</strong> at Jovian has
+                been submitted</p>
+
+            <b>Full Name</b>
+            <div class="mb-2">{{ application.full_name }}</div>
+
+            <b>Email Address</b>
+            <div class="mb-2">{{ application.email }}</div>
+
+            <b>LinkedIn URL</b>
+            <div class="mb-2">{{ application.linkedin_url }}</div>
+
+            <b>Work Experience</b>
+            <div class="mb-2">{{ application.work_experience }}</div>
+
+            <b>Education</b>
+            <div class="mb-2">{{ application.education }}</div>
+
+            <b>Resume Url</b>
+            <div class="mb-2">{{ application.resume_url }}</div>
+        </div>
+
+        {% include 'footer.html' %}
+    </body>
+</html>
